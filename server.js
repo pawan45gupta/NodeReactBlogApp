@@ -4,6 +4,10 @@ var app = express();
 var cors = require('cors');
 const bodyParser = require('body-parser');
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, './client/build')));
+
+app.use('/', index);
 app.use(bodyParser.json());
 
 var con = mysql.createConnection({

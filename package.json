@@ -4,8 +4,9 @@
   "description": "This app is based on Node Js and ReactJS and MySql as database for Blog Website. We have Material UI as css framework",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client/ && npm install && npm run build"
   },
   "repository": {
     "type": "git",
